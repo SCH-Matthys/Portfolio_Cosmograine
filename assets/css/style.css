@@ -99,7 +99,8 @@ header nav p {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #333333;
-  font-weight: 500;
+  font-weight: bold;
+  letter-spacing: 1px;
   font-size: 24px;
   text-align: center;
 }
@@ -115,6 +116,19 @@ header nav p {
   color: #333333;
   font-size: 32px;
   padding-bottom: 36px;
+  position: relative;
+}
+#mainContact h1::after {
+  top: 20px;
+  rotate: 0deg;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  position: absolute;
+  content: "";
+  width: 230px;
+  height: 24px;
+  background-color: #AEADF0;
 }
 #mainContact form {
   font-family: Inria;
@@ -196,18 +210,36 @@ header nav p {
   border: solid 1px #B99768;
   background-color: #B99768;
 }
-#mainContact p {
+#mainContact p:nth-of-type(1) {
   text-align: center;
   font-size: 24px;
   display: block;
 }
-#mainContact p a {
-  font-weight: bold;
-  font-size: 26px;
-  color: #333333;
+#mainContact p {
+  text-align: center;
 }
-#mainContact p a:hover {
-  color: #AEADF0;
+#mainContact a {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #333333;
+  position: relative;
+  color: #333333;
+  text-decoration: none;
+}
+#mainContact a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  width: 0;
+  height: 24px;
+  background-color: #AEADF0;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+#mainContact a:hover::after {
+  width: 110%;
 }
 
 #mainIllustration {
@@ -220,23 +252,438 @@ header nav p {
   font-size: 32px;
   letter-spacing: 1px;
   color: #333333;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
+  position: relative;
+}
+#mainIllustration h1::after {
+  top: 20px;
+  rotate: 0deg;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 24px;
+  background-color: #AEADF0;
 }
 #mainIllustration #images-container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
 }
 #mainIllustration #images-container img {
-  width: 24.25%;
-  height: 350px;
+  width: 330px;
+  height: 330px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.1s;
   border: solid 1px rgba(255, 255, 255, 0);
 }
 #mainIllustration #images-container img:hover {
   transform: scale(1.05);
-  border: solid 1px #333333;
+  border: solid 1px #AEADF0;
+}
+#mainIllustration #container-show-image {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainIllustration #container-show-image.hidden {
+  display: none;
+}
+#mainIllustration #container-show-image img {
+  max-width: 90%;
+  max-height: 90%;
+}
+#mainIllustration #btn-close, #mainIllustration #btn-left, #mainIllustration #btn-right {
+  position: absolute;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 25;
+  transition: 0.2s;
+}
+#mainIllustration #btn-close:hover, #mainIllustration #btn-left:hover, #mainIllustration #btn-right:hover {
+  color: #AEADF0;
+}
+#mainIllustration #btn-close {
+  top: 24px;
+  right: 48px;
+}
+#mainIllustration #btn-left {
+  left: 48px;
+  top: 50%;
+}
+#mainIllustration #btn-right {
+  right: 56px;
+  top: 50%;
+}
+
+#mainBandeDessinee {
+  width: 100%;
+  height: auto;
+  padding: 100px;
+}
+#mainBandeDessinee h1 {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 1px;
+  color: #333333;
+  padding-bottom: 50px;
+  position: relative;
+}
+#mainBandeDessinee h1::after {
+  top: 20px;
+  rotate: 0deg;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  position: absolute;
+  content: "";
+  width: 300px;
+  height: 24px;
+  background-color: #AEADF0;
+}
+#mainBandeDessinee #images-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+#mainBandeDessinee #images-container img {
+  width: 330px;
+  height: 330px;
+  cursor: pointer;
+  transition: 0.1s;
+  border: solid 1px rgba(255, 255, 255, 0);
+}
+#mainBandeDessinee #images-container img:hover {
+  transform: scale(1.05);
+  border: solid 1px #AEADF0;
+}
+#mainBandeDessinee #container-show-image {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainBandeDessinee #container-show-image.hidden {
+  display: none;
+}
+#mainBandeDessinee #container-show-image img {
+  max-width: 90%;
+  max-height: 90%;
+}
+#mainBandeDessinee #btn-close, #mainBandeDessinee #btn-left, #mainBandeDessinee #btn-right {
+  position: absolute;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 25;
+  transition: 0.2s;
+}
+#mainBandeDessinee #btn-close:hover, #mainBandeDessinee #btn-left:hover, #mainBandeDessinee #btn-right:hover {
+  color: #AEADF0;
+}
+#mainBandeDessinee #btn-close {
+  top: 24px;
+  right: 48px;
+}
+#mainBandeDessinee #btn-left {
+  left: 48px;
+  top: 50%;
+}
+#mainBandeDessinee #btn-right {
+  right: 56px;
+  top: 50%;
+}
+
+#mainTatouage {
+  width: 100%;
+  height: auto;
+  padding: 100px;
+}
+#mainTatouage h1 {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 1px;
+  color: #333333;
+  padding-bottom: 50px;
+  position: relative;
+}
+#mainTatouage h1::after {
+  top: 20px;
+  rotate: 0deg;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  position: absolute;
+  content: "";
+  width: 180px;
+  height: 24px;
+  background-color: #AEADF0;
+}
+#mainTatouage #images-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+#mainTatouage #images-container img {
+  width: 330px;
+  height: 330px;
+  cursor: pointer;
+  transition: 0.1s;
+  border: solid 1px rgba(255, 255, 255, 0);
+}
+#mainTatouage #images-container img:hover {
+  transform: scale(1.05);
+  border: solid 1px #AEADF0;
+}
+#mainTatouage #container-show-image {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainTatouage #container-show-image.hidden {
+  display: none;
+}
+#mainTatouage #container-show-image img {
+  max-width: 90%;
+  max-height: 90%;
+}
+#mainTatouage #btn-close, #mainTatouage #btn-left, #mainTatouage #btn-right {
+  position: absolute;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 25;
+  transition: 0.2s;
+}
+#mainTatouage #btn-close:hover, #mainTatouage #btn-left:hover, #mainTatouage #btn-right:hover {
+  color: #AEADF0;
+}
+#mainTatouage #btn-close {
+  top: 24px;
+  right: 48px;
+}
+#mainTatouage #btn-left {
+  left: 48px;
+  top: 50%;
+}
+#mainTatouage #btn-right {
+  right: 56px;
+  top: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+  #mainIndex > div {
+    margin: 50px;
+    width: calc(100% - 100px);
+    height: calc(100% - 100px);
+  }
+}
+@media screen and (max-width: 900px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    padding: 25px 50px;
+  }
+  header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+  }
+  header nav ul li {
+    text-align: end;
+  }
+  #mainIllustration {
+    padding: 50px 0px;
+  }
+  #mainIllustration #images-container {
+    padding: 0px 10px;
+  }
+  #mainIllustration #images-container img {
+    width: 270px;
+    height: 270px;
+  }
+  #mainIllustration #btn-close {
+    top: 8px;
+    right: 8px;
+  }
+  #mainIllustration #btn-left {
+    left: 8px;
+    top: 50%;
+  }
+  #mainIllustration #btn-right {
+    right: 8px;
+    top: 50%;
+  }
+  #mainBandeDessinee {
+    padding: 50px 0px;
+  }
+  #mainBandeDessinee #images-container {
+    padding: 0px 10px;
+  }
+  #mainBandeDessinee #images-container img {
+    width: 270px;
+    height: 270px;
+  }
+  #mainBandeDessinee #btn-close {
+    top: 8px;
+    right: 8px;
+  }
+  #mainBandeDessinee #btn-left {
+    left: 8px;
+    top: 50%;
+  }
+  #mainBandeDessinee #btn-right {
+    right: 8px;
+    top: 50%;
+  }
+  #mainTatouage {
+    padding: 50px 0px;
+  }
+  #mainTatouage #images-container {
+    padding: 0px 10px;
+  }
+  #mainTatouage #images-container img {
+    width: 270px;
+    height: 270px;
+  }
+  #mainTatouage #btn-close {
+    top: 8px;
+    right: 8px;
+  }
+  #mainTatouage #btn-left {
+    left: 8px;
+    top: 50%;
+  }
+  #mainTatouage #btn-right {
+    right: 8px;
+    top: 50%;
+  }
+}
+@media screen and (max-width: 575px) {
+  header nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav ul {
+    justify-content: center;
+    align-items: center;
+  }
+  header nav ul li {
+    text-align: center;
+  }
+  #mainIllustration #images-container {
+    padding: 0px 10px;
+  }
+  #mainIllustration #images-container img {
+    width: 100%;
+    height: 500px;
+  }
+  #mainIllustration #images-container img:hover {
+    transform: scale(1);
+  }
+  #mainIllustration #btn-close {
+    color: #AEADF0;
+  }
+  #mainIllustration #btn-left {
+    color: #AEADF0;
+  }
+  #mainIllustration #btn-right {
+    color: #AEADF0;
+  }
+  #mainBandeDessinee #images-container {
+    padding: 0px 10px;
+  }
+  #mainBandeDessinee #images-container img {
+    width: 100%;
+    height: 500px;
+  }
+  #mainBandeDessinee #images-container img:hover {
+    transform: scale(1);
+  }
+  #mainBandeDessinee #btn-close {
+    color: #AEADF0;
+  }
+  #mainBandeDessinee #btn-left {
+    color: #AEADF0;
+  }
+  #mainBandeDessinee #btn-right {
+    color: #AEADF0;
+  }
+  #mainTatouage #images-container {
+    padding: 0px 10px;
+  }
+  #mainTatouage #images-container img {
+    width: 100%;
+    height: 500px;
+  }
+  #mainTatouage #images-container img:hover {
+    transform: scale(1);
+  }
+  #mainTatouage #btn-close {
+    color: #AEADF0;
+  }
+  #mainTatouage #btn-left {
+    color: #AEADF0;
+  }
+  #mainTatouage #btn-right {
+    color: #AEADF0;
+  }
+}
+@media screen and (max-width: 450px) {
+  #mainIllustration #images-container {
+    padding: 0px;
+  }
+  #mainIllustration #images-container img {
+    height: 400px;
+  }
+  #mainBandeDessinee #images-container {
+    padding: 0px;
+  }
+  #mainBandeDessinee #images-container img {
+    height: 400px;
+  }
+  #mainTatouage #images-container {
+    padding: 0px;
+  }
+  #mainTatouage #images-container img {
+    height: 400px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
