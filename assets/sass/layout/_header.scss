@@ -1,0 +1,58 @@
+@use "./../abstract/variables" as var;
+@use "./../base/typography";
+
+header{
+    padding: 100px 50px 20px;
+    border-right: solid 1px var.$color-dark-cofe;
+    box-shadow: 0px 4px 16px 4px var.$color-dark-cofe;
+    a{
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: var.$color-black;
+        position: relative;
+        color: var.$color-black;
+        text-decoration: none;
+    }
+    a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -10px;
+        width: 0;
+        height: 24px;
+        background-color: var.$color-purple;
+        transition: width 0.3s ease;
+        z-index: -1;
+    }
+    a:hover::after {
+        width: 110%;
+    }
+    nav{
+        height: calc(100vh - 120px);
+        display: flex;
+        flex-direction: column;
+        h2{
+            padding-bottom: 32px;
+            a{
+                font-size: 36px;
+                color: var.$color-black;
+                letter-spacing: 2px;
+            }
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            li{
+                padding-bottom: 8px;
+                display: block;
+                width: 230px;
+            }
+        }
+        p{
+            font-family: Inria;
+            font-size: 14px;
+            margin-top: auto;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@use "./../base/typography";
+@use "./../abstract/variables" as var;
+
+body{
+    font-family: IndieFlower;
+    background-color: var.$color-cofe;
+    display: flex;
+}

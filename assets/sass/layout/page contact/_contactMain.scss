@@ -1,0 +1,108 @@
+@use "./../../abstract/variables" as var;
+@use "./../../base/typography";
+
+#mainContact{
+    width: 100%;
+    height: auto;
+    padding: 100px;
+    h1{
+        text-align: center;
+        letter-spacing: 1px;
+        color: var.$color-black;
+        font-size: 32px;
+        padding-bottom: 36px;
+    }
+    form{
+        font-family: Inria;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        background-color: white;
+        border: dashed 1px var.$color-dark-cofe;
+        box-shadow: 24px 24px var.$color-black;
+        padding: 50px;
+        margin-bottom: 32px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        >div{
+            display: flex;
+            gap: 64px;
+            >div{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        label{
+            font-size: 18px;
+            padding-bottom: 4px;
+        }
+        input{
+            margin-bottom: 24px;
+            padding: 8px 32px;
+            border-radius: 6px;
+            border: dashed 1px var.$color-dark-cofe;
+            font-size: 16px;
+            letter-spacing: 2px;
+            &::placeholder{
+                font-size: 16px;
+                letter-spacing: 1px;
+                color: var.$color-dark-cofe;
+                font-family: Inria;
+            }
+        }
+        select{
+            margin-bottom: 24px;
+            padding: 8px 32px;
+            border-radius: 6px;
+            border: solid 1px var.$color-dark-cofe;
+            color: var.$color-black;
+            option{
+                color: var.$color-black;
+            }
+        }
+        textarea{
+            width: 400px;
+            border: dashed 1px var.$color-dark-cofe;
+            border-radius: 6px;
+            text-align: center;
+            padding: 8px;
+            color: var.$color-black;
+            font-size: 16px;
+            margin-bottom: 32px;
+            &::placeholder{
+                color: var.$color-dark-cofe;
+            }
+        }
+        button{
+            padding: 8px 32px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: Inria;
+            border-radius: 6px;
+            background-color: var.$color-cofe;
+            border: solid 1px var.$color-dark-cofe;
+            color: var.$color-black;
+            &:hover{
+                border: solid 1px var.$color-dark-cofe;
+                background-color: var.$color-dark-cofe;
+            }
+        }
+    }
+    p{
+        text-align: center;
+        font-size: 24px;
+        display: block;
+        a{
+            font-weight: bold;
+            font-size: 26px;
+            color: var.$color-black;
+            &:hover{
+                color: var.$color-purple;
+            }
+        }
+    }
+}

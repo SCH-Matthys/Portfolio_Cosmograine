@@ -1,0 +1,15 @@
+// BASE
+@use "./base/resets";
+
+// LAYOUT GENERAL
+@use "./layout/general";
+@use "./layout/header";
+
+// LAYOUT PAGE INDEX
+@use "./layout/page\ index/indexMain";
+
+// LAYOUT PAGE CONTACT
+@use "./layout/page\ contact/contactMain";
+
+// LAYOUT PAGE ILLUSTRATIONS
+@use "./layout/page\ illustrations/illustrationMain";
