@@ -42,10 +42,17 @@
         transform: translateX(-50%);
         >div{
             display: flex;
-            gap: 64px;
+            width: 100%;
+            justify-content: space-around;
             >div{
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 250px;
+                input{
+                    width: 250px;
+                }
             }
         }
         label{
@@ -53,8 +60,11 @@
             padding-bottom: 4px;
         }
         input{
+            width: 250px;
+            text-align: center;
+            width: 150px;
             margin-bottom: 24px;
-            padding: 8px 32px;
+            padding: 8px 0px;
             border-radius: 6px;
             border: dashed 1px var.$color-dark-cofe;
             font-size: 16px;
@@ -66,7 +76,12 @@
                 font-family: Inria;
             }
         }
+        #formInputEmail{
+            width: 250px;
+            text-align: center;
+        }
         select{
+            width: 250px;
             margin-bottom: 24px;
             padding: 8px 32px;
             border-radius: 6px;

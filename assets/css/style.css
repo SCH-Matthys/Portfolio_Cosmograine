@@ -148,19 +148,29 @@ header nav p {
 }
 #mainContact form > div {
   display: flex;
-  gap: 64px;
+  width: 100%;
+  justify-content: space-around;
 }
 #mainContact form > div > div {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+}
+#mainContact form > div > div input {
+  width: 250px;
 }
 #mainContact form label {
   font-size: 18px;
   padding-bottom: 4px;
 }
 #mainContact form input {
+  width: 250px;
+  text-align: center;
+  width: 150px;
   margin-bottom: 24px;
-  padding: 8px 32px;
+  padding: 8px 0px;
   border-radius: 6px;
   border: dashed 1px #B99768;
   font-size: 16px;
@@ -172,7 +182,12 @@ header nav p {
   color: #B99768;
   font-family: Inria;
 }
+#mainContact form #formInputEmail {
+  width: 250px;
+  text-align: center;
+}
 #mainContact form select {
+  width: 250px;
   margin-bottom: 24px;
   padding: 8px 32px;
   border-radius: 6px;
@@ -503,17 +518,94 @@ header nav p {
   top: 50%;
 }
 
+@media screen and (max-width: 1550px) {
+  #mainIllustration {
+    overflow: hidden;
+    padding: 100px 25px 50px;
+  }
+  #mainIllustration #images-container {
+    padding: 0px 10px;
+  }
+  #mainBandeDessinee {
+    overflow: hidden;
+    padding: 100px 25px 50px;
+  }
+  #mainBandeDessinee #images-container {
+    padding: 0px 10px;
+  }
+  #mainTatouage {
+    overflow: hidden;
+    padding: 100px 25px 50px;
+  }
+  #mainTatouage #images-container {
+    padding: 0px 10px;
+  }
+  #mainContact form {
+    width: 60%;
+  }
+  #mainContact form > div > div input {
+    width: 190px;
+  }
+  #mainContact form textarea {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 1425px) {
+  #mainIllustration #images-container img {
+    width: 280px;
+    height: 280px;
+  }
+  #mainBandeDessinee #images-container img {
+    width: 280px;
+    height: 280px;
+  }
+  #mainTatouage #images-container img {
+    width: 280px;
+    height: 280px;
+  }
+}
 @media screen and (max-width: 1200px) {
   #mainIndex > div {
     margin: 50px;
     width: calc(100% - 100px);
     height: calc(100% - 100px);
   }
+  #mainIndex > div p {
+    width: 80%;
+  }
+  #mainContact {
+    padding: 100px 50px;
+  }
+  #mainContact form {
+    width: 70%;
+  }
+  #mainContact form > div > div input {
+    width: 190px;
+  }
+  #mainContact form textarea {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #mainIllustration #images-container img {
+    width: 240px;
+    height: 240px;
+  }
+  #mainBandeDessinee #images-container img {
+    width: 240px;
+    height: 240px;
+  }
+  #mainTatouage #images-container img {
+    width: 240px;
+    height: 240px;
+  }
+  #mainContact {
+    padding: 100px 25px;
+  }
 }
 @media screen and (max-width: 900px) {
   body {
-    display: flex;
-    flex-direction: column;
+    display: initial;
   }
   header {
     padding: 25px 50px;
@@ -526,6 +618,18 @@ header nav p {
   }
   header nav ul li {
     text-align: end;
+  }
+  #mainIndex {
+    height: calc(100vh - 222px);
+  }
+  #mainIndex > div {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  #mainIndex > div p {
+    width: 80%;
+    top: 35%;
   }
   #mainIllustration {
     padding: 50px 0px;
@@ -593,6 +697,21 @@ header nav p {
     right: 8px;
     top: 50%;
   }
+  #mainContact {
+    padding: 50px 0px;
+  }
+  #mainContact section {
+    padding: 0px 25px;
+  }
+  #mainContact section form {
+    width: 80%;
+  }
+  #mainContact section form > div {
+    gap: 10px;
+  }
+  #mainContact section form > div > div input {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 575px) {
   header nav {
@@ -606,6 +725,11 @@ header nav p {
   }
   header nav ul li {
     text-align: center;
+  }
+  #mainIndex > div p {
+    font-size: 20px;
+    top: 25%;
+    width: 85%;
   }
   #mainIllustration #images-container {
     padding: 0px 10px;
@@ -664,6 +788,61 @@ header nav p {
   #mainTatouage #btn-right {
     color: #AEADF0;
   }
+  #mainContact {
+    padding: 50px 0px;
+  }
+  #mainContact section {
+    padding: 0px 0px;
+  }
+  #mainContact section form {
+    width: 85%;
+    padding: 25px;
+    align-items: start;
+    box-shadow: none;
+  }
+  #mainContact section form > div {
+    width: 350px;
+    flex-direction: column;
+    align-items: start;
+    gap: 0px;
+  }
+  #mainContact section form > div > div {
+    align-items: start;
+    width: 100%;
+  }
+  #mainContact section form > div > div label {
+    text-align: start;
+  }
+  #mainContact section form > div > div input {
+    width: 100%;
+    text-align: start;
+  }
+  #mainContact section form > div > div input::placeholder {
+    padding: 0px 16px;
+    text-align: start;
+  }
+  #mainContact section form input {
+    width: 350px;
+  }
+  #mainContact section form input::placeholder {
+    padding: 0px 16px;
+    text-align: start;
+  }
+  #mainContact section form #formInputEmail {
+    width: 350px;
+  }
+  #mainContact section form select {
+    width: 350px;
+    padding: 8px 16px;
+  }
+  #mainContact section form textarea {
+    width: 350px;
+    height: 150px;
+  }
+  #mainContact section form textarea::placeholder {
+    padding: 8px 16px;
+    text-align: start;
+  }
 }
 @media screen and (max-width: 450px) {
   #mainIllustration #images-container {
@@ -683,6 +862,18 @@ header nav p {
   }
   #mainTatouage #images-container img {
     height: 400px;
+  }
+  #mainContact section form > div {
+    width: 300px;
+  }
+  #mainContact section form select {
+    width: 300px;
+  }
+  #mainContact section form #formInputEmail {
+    width: 300px;
+  }
+  #mainContact section form textarea {
+    width: 300px;
   }
 }
 

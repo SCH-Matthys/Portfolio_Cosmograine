@@ -1,20 +1,145 @@
 @use "./../abstract/variables" as var;
 @use "./../base/typography";
 
+
+
+@media screen and (max-width:(1550px)){
+    #mainIllustration{
+        overflow: hidden;
+        padding: 100px 25px 50px;
+        #images-container{
+            padding: 0px 10px;
+        }
+    }
+
+    #mainBandeDessinee{
+        overflow: hidden;
+        padding: 100px 25px 50px;
+        #images-container{
+            padding: 0px 10px;
+        }
+    }
+
+    #mainTatouage{
+        overflow: hidden;
+        padding: 100px 25px 50px;
+        #images-container{
+            padding: 0px 10px;
+        }
+    }
+
+    #mainContact{
+        form{
+            width: 60%;
+            >div{
+                >div{
+                    input{
+                        width: 190px;
+                    }
+                }
+            }
+            textarea{
+                width: 350px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:(1425px)){
+    #mainIllustration{
+        #images-container{
+            img{
+                width: 280px;
+                height: 280px;
+            }
+        }
+    }
+
+    #mainBandeDessinee{
+        #images-container{
+            img{
+                width: 280px;
+                height: 280px;
+            }
+        }
+    }
+
+    #mainTatouage{
+        #images-container{
+            img{
+                width: 280px;
+                height: 280px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width:(1200px)){
     #mainIndex{
         >div{
             margin: 50px;
             width: calc( 100% - 100px);
             height: calc( 100% - 100px);
+            p{
+                width: 80%;
+            }
         }
+    }
+
+    #mainContact{
+        padding: 100px 50px;
+        form{
+            width: 70%;
+            >div{
+                >div{
+                    input{
+                        width: 190px;
+                    }
+                }
+            }
+            textarea{
+                width: 350px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:(1000px)){
+    #mainIllustration{
+        #images-container{
+            img{
+                width: 240px;
+                height: 240px;
+            }
+        }
+    }
+
+    #mainBandeDessinee{
+        #images-container{
+            img{
+                width: 240px;
+                height: 240px;
+            }
+        }
+    }
+
+    #mainTatouage{
+        #images-container{
+            img{
+                width: 240px;
+                height: 240px;
+            }
+        }
+    }
+
+    #mainContact{
+        padding: 100px 25px;
     }
 }
 
 @media screen and (max-width:(900px)){
     body{
-        display: flex;
-        flex-direction: column;
+        display: initial;
     }
     header{
         padding: 25px 50px;
@@ -27,6 +152,19 @@
                 li{
                     text-align: end;
                 }
+            }
+        }
+    }
+
+    #mainIndex{
+        height: calc(100vh - 222px);
+        >div{
+            margin: 0px;
+            width: 100%;
+            height: 100%;
+            p{
+                width: 80%;
+                top: 35%;
             }
         }
     }
@@ -97,6 +235,24 @@
         #btn-right {
             right: 8px;
             top: 50%;
+        }
+    }
+
+    #mainContact{
+        padding: 50px 0px;
+        section{
+            padding: 0px 25px;
+            form{
+                width: 80%;
+                >div{
+                    gap: 10px;
+                    >div{
+                        input{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -116,6 +272,16 @@
             }
         }
     }
+
+    #mainIndex{
+        >div{
+            p{
+                font-size: 20px;
+                top: 25%;
+                width: 85%;
+            }
+        }
+    }
     #mainIllustration{
         #images-container{
             padding: 0px 10px;
@@ -179,6 +345,62 @@
         }
         #btn-right {
             color: var.$color-purple;
+        }
+    }
+
+    #mainContact{
+        padding: 50px 0px;
+        section{
+            padding: 0px 0px;
+            form{
+                width: 85%;
+                padding: 25px;
+                align-items: start;
+                box-shadow: none;
+                >div{
+                    width: 350px;
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 0px;
+                    >div{
+                        align-items: start;
+                        width: 100%;
+                        label{
+                            text-align: start;
+                        }
+                        input{
+                            width: 100%;
+                            text-align: start;
+                            &::placeholder{
+                                padding: 0px 16px;
+                                text-align: start;
+                            }
+                        }
+                    }
+                }
+                input{
+                    width: 350px;
+                    &::placeholder{
+                        padding: 0px 16px;
+                        text-align: start;
+                    }
+                }
+                #formInputEmail{
+                    width: 350px;
+                }
+                select{
+                    width: 350px;
+                    padding: 8px 16px;
+                }
+                textarea{
+                    width: 350px;
+                    height: 150px;
+                    &::placeholder{
+                        padding: 8px 16px;
+                        text-align: start;
+                    }
+                }
+            }
         }
     }
 }
@@ -207,6 +429,25 @@
             padding: 0px;
             img{
                 height: 400px;
+            }
+        }
+    }
+
+    #mainContact{
+        section{
+            form{
+                >div{
+                    width: 300px;
+                }
+                select{
+                    width: 300px;
+                }
+                #formInputEmail{
+                    width: 300px;
+                }
+                textarea{
+                    width: 300px;
+                }
             }
         }
     }
