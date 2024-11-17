@@ -149,8 +149,33 @@
             justify-content: space-between;
             height: auto;
             ul{
+                margin-top: 16px;
+                display: none;
                 li{
                     text-align: end;
+                }
+            }
+            #ulBurger.active {
+                display: flex;
+            }
+            >div{
+                >div{
+                    display: flex;
+                }
+                #menuBurger.menuClose{
+                    >div:nth-of-type(1){
+                        rotate: 45deg;
+                        margin-top: 16px;
+                        height: 8px;
+                    }
+                    >div:nth-of-type(2){
+                        display: none;
+                    }
+                    >div:nth-of-type(3){
+                        rotate: -45deg;
+                        margin-bottom: 16px;
+                        height: 8px;
+                    }
                 }
             }
         }
@@ -263,6 +288,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            >div{
+                align-items: center;   
+            }
             ul{
                 justify-content: center;
                 align-items: center;

@@ -60,6 +60,26 @@ header nav h2 a {
   color: #333333;
   letter-spacing: 2px;
 }
+header nav > div {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+header nav > div > div {
+  margin-top: 12px;
+  width: 45px;
+  height: 35px;
+  display: none;
+  justify-content: space-between;
+  flex-direction: column;
+}
+header nav > div > div > div {
+  transition: 0.2s;
+  width: 45px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #333333;
+}
 header nav ul {
   display: flex;
   flex-direction: column;
@@ -616,8 +636,31 @@ header nav p {
     justify-content: space-between;
     height: auto;
   }
+  header nav ul {
+    margin-top: 16px;
+    display: none;
+  }
   header nav ul li {
     text-align: end;
+  }
+  header nav #ulBurger.active {
+    display: flex;
+  }
+  header nav > div > div {
+    display: flex;
+  }
+  header nav > div #menuBurger.menuClose > div:nth-of-type(1) {
+    rotate: 45deg;
+    margin-top: 16px;
+    height: 8px;
+  }
+  header nav > div #menuBurger.menuClose > div:nth-of-type(2) {
+    display: none;
+  }
+  header nav > div #menuBurger.menuClose > div:nth-of-type(3) {
+    rotate: -45deg;
+    margin-bottom: 16px;
+    height: 8px;
   }
   #mainIndex {
     height: calc(100vh - 222px);
@@ -717,6 +760,9 @@ header nav p {
   header nav {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+  }
+  header nav > div {
     align-items: center;
   }
   header nav ul {
